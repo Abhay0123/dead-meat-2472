@@ -14,8 +14,11 @@ Project name : ELECTRONICS BAZAR
 
 // Geekbuying App Clone 
       Tech used :  Reactjs
+      
       Dependencies : React-router-dom@6
+      
                    : Chakra UI
+                   
                    : axios
 
              
