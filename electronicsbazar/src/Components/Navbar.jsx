@@ -78,65 +78,65 @@ const Navbar = () => {
 
           <Box h={200}>
             <Box className="active2">
-              <a href="#">Language </a>
+              <a >Language </a>
               <div className="deepmenu2">
                 <ul style={{ display: "inline-block" }} className="menu">
                   <div>
-                    <a href="#">English</a>
+                    <a >English</a>
                   </div>
                   <div>
-                    <a href="#">Italiano</a>
+                    <a >Italiano</a>
                   </div>
                   <div>
-                    <a href="#">Deutsch</a>
+                    <a >Deutsch</a>
                   </div>
                   <div>
-                    <a href="#">Español</a>
+                    <a >Español</a>
                   </div>
                   <div>
-                    <a href="#">Français</a>
+                    <a >Français</a>
                   </div>
                   <div>
-                    <a href="#">Português</a>
+                    <a >Português</a>
                   </div>
                   <div>
-                    <a href="#">Slovenčina</a>
+                    <a >Slovenčina</a>
                   </div>
                   <div>
-                    <a href="#">Magyar</a>
+                    <a >Magyar</a>
                   </div>
                   <div>
-                    <a href="#">Slovenščina</a>
+                    <a >Slovenščina</a>
                   </div>
                   <div>
-                    <a href="#">Lietuvių kalba</a>
+                    <a >Lietuvių kalba</a>
                   </div>
                   <div>
-                    <a href="#">Svenska</a>
+                    <a >Svenska</a>
                   </div>
                   <div>
-                    <a href="#">Ελληνικά</a>
+                    <a>Ελληνικά</a>
                   </div>
                   <div>
-                    <a href="#">Dansk</a>
+                    <a>Dansk</a>
                   </div>
                   <div>
-                    <a href="#">עברית</a>
+                    <a >עברית</a>
                   </div>
                   <div>
-                    <a href="#">Hrvatski jezik</a>
+                    <a >Hrvatski jezik</a>
                   </div>
                   <div>
-                    <a href="#">Polskie</a>
+                    <a >Polskie</a>
                   </div>
                   <div>
-                    <a href="#">Limba română</a>
+                    <a >Limba română</a>
                   </div>
                   <div>
-                    <a href="#">Čeština</a>
+                    <a>Čeština</a>
                   </div>
                   <div>
-                    <a href="#">Japanese </a>
+                    <a>Japanese </a>
                   </div>
                 </ul>
               </div>
@@ -145,20 +145,20 @@ const Navbar = () => {
 
           <Box>
             <Box className="active3">
-              <a href="#">Support Center</a>
+              <a >Support Center</a>
               <div className="deepmenu3">
                 <ul style={{ display: "inline-block" }} className="menu">
                   <div>
                     {" "}
-                    <a href="#">Live Chat</a>
+                    <a >Live Chat</a>
                   </div>
                   <div>
                     {" "}
-                    <a href="#">Ticket</a>
+                    <a >Ticket</a>
                   </div>
                   <div>
                     {" "}
-                    <a href="#">Help Center</a>
+                    <a >Help Center</a>
                   </div>
                 </ul>
               </div>
@@ -223,14 +223,14 @@ const Navbar = () => {
           >
             <Box className="active4">
               <Box bg="blue.300" borderRadius="10px 10px 0px 0px" p="10px">
-                <a href="#">
+                <a >
                   <HamburgerIcon /> Categories
                 </a>
               </Box>
               <Box className="deepmenu4">
                 <ul style={{ display: "inline-block" }} className="menu">
                   <Box className="first">
-                    <a href="#" className="first">
+                    <a className="first">
                       Local Warehouses
                     </a>
                     <Box
@@ -266,7 +266,7 @@ const Navbar = () => {
 
                   <Box className="second">
                     {" "}
-                    <a className="second" href="#">
+                    <a className="second" >
                       Sports & Outdoors
                     </a>
                     <Box
@@ -310,7 +310,7 @@ const Navbar = () => {
                   {/* */}
                   <div className="third">
                     {" "}
-                    <a href="#">Smart Home & Garden</a>
+                    <a >Smart Home & Garden</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -352,7 +352,7 @@ const Navbar = () => {
                   {/**/}
                   <div className="forth">
                     {" "}
-                    <a href="#">Consumer Electronics</a>
+                    <a >Consumer Electronics</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -397,7 +397,7 @@ const Navbar = () => {
                   </div>
                   <div className="fifth">
                     {" "}
-                    <a href="#">Generators & Portable Power</a>
+                    <a >Generators & Portable Power</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -425,7 +425,7 @@ const Navbar = () => {
 
                   <div className="sixth">
                     {" "}
-                    <a href="#">Computers, Tablets & Accessories</a>
+                    <a>Computers, Tablets & Accessories</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -467,7 +467,7 @@ const Navbar = () => {
                   </div>
                   <Box className="seventh">
                     {" "}
-                    <a href="#">TV Boxes & Mini PCs</a>
+                    <a>TV Boxes & Mini PCs</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -551,7 +551,7 @@ const Navbar = () => {
                   </div>
                   <div className="ninth">
                     {" "}
-                    <a href="#">Phones & Accessories</a>
+                    <a >Phones & Accessories</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -583,7 +583,7 @@ const Navbar = () => {
                   </div>
                   <div className="tenth">
                     {" "}
-                    <a href="#">Automobiles & Motorcycles</a>
+                    <a >Automobiles & Motorcycles</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -615,7 +615,7 @@ const Navbar = () => {
                   </div>
                   <div className="eleventh">
                     {" "}
-                    <a href="#">Security Systems</a>
+                    <a >Security Systems</a>
                     <Box
                       ml="250px"
                       h="442px"
@@ -646,7 +646,7 @@ const Navbar = () => {
                   </div>
                   <div className="twelth">
                     {" "}
-                    <a href="#">Wearable Devices</a>
+                    <a >Wearable Devices</a>
                     <Box
                       ml="250px"
                       h="442px"

@@ -11,3 +11,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.deepmenu1,.deepmenu2,.deepmenu3,.deepmenu4{
+  display: none;
+}
+.active1:hover .deepmenu1,.active2:hover .deepmenu2,.active3:hover .deepmenu3{
+  display: block;
+  position:absolute;
+  text-align: left;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   border-radius:10px; 
+  background-color: white;
+  color : black;
+}
+.active2:hover .deepmenu2{
+  height: 400px;
+  overflow-y:scroll;
+
+}
+
+.active4:hover .deepmenu4{
+  display: block;
+  position:absolute;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  color : black;
+  padding: 6px;
+  
+}
+.deepmenu4 div{
+  padding: 6px;
+}
+.deepmenu4 div:hover{
+  
+  background-color: rgba(0, 0, 255, 0.075);
+}
+.localWarehouse,.sportsAndoutdoors,.smartHome,.consumerElectronics,
+.generators,.computers,.TvBoxes,.Toys,.phones,.Automobiles,.security,.wearableDevices{
+  display: none;
+}
+.first:hover .localWarehouse ,
+.second:hover .sportsAndoutdoors,
+.third:hover .smartHome,
+.forth:hover .consumerElectronics,
+.fifth:hover .generators,
+.sixth:hover .computers, 
+.seventh:hover .TvBoxes,
+.eighth:hover .Toys,
+.ninth:hover .phones,
+.tenth:hover .Automobiles,
+.eleventh:hover .security,
+.twelth:hover .wearableDevices
+{
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+   gap:5px;
+ 
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.slider > div {
+  background-color: aliceblue;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.slider > .active {
+  background-color: rgb(23, 11, 187);
+  border-color: rgb(2, 0, 128);
+}
