@@ -1,17 +1,18 @@
 import {Box,SimpleGrid,HStack,Image,Text,Heading,GridItem,Grid}  from '@chakra-ui/react';
 import React, { useState,useEffect,useRef } from 'react'
 import ImageSlider from './ImageSlider.js';
+import NewArrivals from '../Pages/NewArrivals.jsx';
 const LandingPage=()=>{
     const [imgInd, setImgInd] = useState(0);
     const timeoutRef = useRef(null);
     const Slides=[
-        {url:'https://img.gkbcdn.com/bn/2207/740X670-62c3b8132b40c9270489e6ae._p1_.jpg'},
-        {url:'https://img.gkbcdn.com/bn/2211/740x670-636328c82b40c92ed8b1d35e._p1_.jpg'},
-        {url:'https://img.gkbcdn.com/bn/2211/740x670-6369b73f2b40c95728c3e707._p1_.jpg'},
-        {url:'https://img.gkbcdn.com/bn/2210/740x670-635f8c012b40c90c8c92734d._p1_.jpg'},
-        {url:'https://img.gkbcdn.com/bn/2211/740x670-63647bec2b40c94fac2af423._p1_.jpg'},
-        {url:'https://img.gkbcdn.com/bn/2211/740x670-63647ba22b40c94fac2af421._p1_.jpg'},
-         {url:'https://img.gkbcdn.com/bn/2211/740x670-636382c52b40c94424fc21e0._p1_.jpg'}
+        { id:'1',url:'https://img.gkbcdn.com/bn/2207/740X670-62c3b8132b40c9270489e6ae._p1_.jpg'},
+        { id:'2',url:'https://img.gkbcdn.com/bn/2211/740x670-636328c82b40c92ed8b1d35e._p1_.jpg'},
+        { id:'3',url:'https://img.gkbcdn.com/bn/2211/740x670-6369b73f2b40c95728c3e707._p1_.jpg'},
+        { id:'4',url:'https://img.gkbcdn.com/bn/2210/740x670-635f8c012b40c90c8c92734d._p1_.jpg'},
+        { id:'5',url:'https://img.gkbcdn.com/bn/2211/740x670-63647bec2b40c94fac2af423._p1_.jpg'},
+        {id:'6',url:'https://img.gkbcdn.com/bn/2211/740x670-63647ba22b40c94fac2af421._p1_.jpg'},
+         {id:'7',url:'https://img.gkbcdn.com/bn/2211/740x670-636382c52b40c94424fc21e0._p1_.jpg'}
     ]
 
     // const LatestItem=[
@@ -249,13 +250,58 @@ const LandingPage=()=>{
     <Heading>Popular Brands </Heading>
                  <Box className='slideshow' mt='20px' mb='30px'>
                   <img src={PopularBrandimages[imgInd]} alt={imgInd} />
-                 <Box className="slider">{PopularBrandimages.map((_, ind) => (
-          <Box onClick={() => setImgInd(ind)} className={imgInd === ind ? "active" : ""}/>))}
+                 <Box className="slider">{PopularBrandimages.map((_, el) => (
+          <Box key={el} onClick={() => setImgInd(el)} className={imgInd === el ? "active" : ""}/>))}
          </Box>
         </Box>
-        
+        {/*Lower Section of this page  */}
+        <Box border='1px solid gray' w='100%' h='280px' borderRadius='8px'>
+          <HStack >
+                 <Box w='33%'>
+                    <Image   src='https://img.gkbcdn.com/bb/tronsmart-20221007152616686._p1_.jpg'></Image>
+                 </Box>
+                 <Box w='67%'>
+                    <HStack>
+                        <Box align='left'>
+                            <Image w='160px' src='https://img.gkbcdn.com/p/2020-01-09/Tronsmart-element-T6-plus-Upgrade-Black-895558-._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>38% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart T6 Plus Upgraded Edition</Text>
+                            <Text as='b'>€51.13</Text>
+                            <br />
+                            <Text as='s'>€81.81</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-11-04/tronsmart-apollo-q10-anc-bluetooth-headphones--e74f5c-1667556691258._w280_p1_.jpg'></Image>
+                            <Text  display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>50% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm'>Tronsmart Apollo Q10 ANC Active Noise</Text>
+                            <Text as='b'>€30.67</Text>
+                            <br />
+                            <Text as='s'>€61.36</Text>
+                        </Box>
+                         <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2019-10-24/tronsmart-element-t6-max-60w-bluetooth-5-0-nfc-speaker-black-1574132858241._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'> 36% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart Element T6 Max 60W Bluetooth 5.0</Text>
+                            <Text as='b'>€65.45</Text>
+                            <br />
+                            <Text as='s'>€102.27</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2020-03-18/Tronsmart-Onyx-Ace-Bluetooth-5-0-TWS-Earphones-White-899355-._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>40% OFF</Text>
+                            <Text fontSize='sm'>Tronsmart Onyx Ace Pro TWS Earbuds, Qualcomm</Text>
+                                 
+                            <Text as='b'>€24.54</Text>
+                            <br />
+                            <Text as='s'>€40.90</Text>
+                        </Box>
+                    </HStack>
 
+                 </Box>
 
+          </HStack>
+      </Box>
+              
         </Box>
     )
 }

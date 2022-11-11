@@ -1,4 +1,4 @@
-import {Box,Text, Image,Link,Stack} from '@chakra-ui/react';
+import {Box,Text, Image,Link,Stack, HStack} from '@chakra-ui/react';
 import { FaFacebookSquare ,FaTelegramPlane,FaTiktok} from 'react-icons/fa';
 import { ImInstagram, ImTwitter} from 'react-icons/im';
 import { GrYoutube,GrMail } from 'react-icons/gr';
@@ -17,7 +17,7 @@ const Footer=()=>{
       </div>
       <div className="footerSecondPart">
         <input placeholder="Enter eamil to get a 5% off coupon" type="text" />
-        <div><Text>Subscribe</Text></div>
+        <Box><Text>Subscribe</Text></Box>
       </div>
       <Box className="footerThirdPart">
         <Box className="footerHelp"  style={{ display: "inline-block",textAlign:'left'}}>
@@ -110,29 +110,31 @@ const Footer=()=>{
           
                <Box className="footerPopularSearchesAllDivs">
             
-          <div><Text>ENGWE</Text></div>
-          <div><Text> MINISFORUM</Text></div>
-          <div><Text> Geekbuying Coupon</Text></div>
-          <div><Text> Roborock</Text></div>
-          <div><Text>powkiddy</Text></div>
-          <div><Text>Miyoo</Text></div>
-          <div><Text>Mini sculpfun</Text></div>
-          <div><Text> laserpecker </Text></div>
-          <div><Text>Wltoys </Text></div>
-          <div><Text>mini laptop</Text></div>
+          <Box><Text>ENGWE</Text></Box>
+          <Box><Text> MINISFORUM</Text></Box>
+          <Box><Text> Geekbuying Coupon</Text></Box>
+          <Box><Text> Roborock</Text></Box>
+          <Box><Text>powkiddy</Text></Box>
+          <Box><Text>Miyoo</Text></Box>
+          <Box><Text>Mini sculpfun</Text></Box>
+          <Box><Text> laserpecker </Text></Box>
+          <Box><Text>Wltoys </Text></Box>
+          <Box><Text>mini laptop</Text></Box>
         </Box>
       </Box>
       
       <Box className="footerFithPart" mb='20px'>
          <Image src='https://content1.geekbuying.com/V1.4/en/images/indexV7/foot_icon.png' alt=''></Image>
             </Box>
-     
-      <Box className="footerSeventhPart" > 
-         <Box></Box>
-        <Text >We use cookies to ensure that we give you the best experience on our website. 
-            By continuing to browse the site, you agree to our use of <Link href='#' color='blue' ml='-55px'>Cookies.</Link>
-            <Stack bg=' #0066ff' width='150px' padding='2px' borderRadius='10px' color='white'><Link>I agree</Link></Stack> </Text> 
-      </Box>
+     <Box>
+      <HStack bg='gray' color='white' gap='10px' padding='6px'>  
+         <Box>
+        <Text>We use cookies to ensure that we give you the best experience on our website.
+            By continuing to browse the site, you agree to our use of<Link as='mark'> cookies.</Link></Text></Box>
+           <Box>
+            <Text bg=' #0066ff' width='150px' padding='2px' borderRadius='10px' color='white'><Link>I agree</Link></Text>  
+        </Box>
+      </HStack></Box>
     </Box>
           
             

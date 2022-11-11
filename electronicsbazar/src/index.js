@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
-import { ChakraProvider } from '@chakra-ui/react'
-=======
+import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react';
->>>>>>> 6782c6b2ad085af73658b9096a42f65985b7337e
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
-    <App />
+    <BrowserRouter>
+      <App />
+    
+    </BrowserRouter>
   </ChakraProvider>
 );
 
