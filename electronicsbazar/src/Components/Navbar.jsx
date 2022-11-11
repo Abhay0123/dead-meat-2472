@@ -15,14 +15,41 @@ import {
   MenuItem,
   Button,
   Flex,
-  VStack,
+  VStack
 } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
+//import AllRoutes from "../Pages/AllRoutes";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { BsCart } from "react-icons/bs";
 
 import { HiOutlineUser } from "react-icons/hi";
+   
+const links = [
+    { path: "/newarrivals", title: "New"},
+    { path: "/bestselling", title: "Bestselling"},
+    { path: "/items", title: " Brand"},
+    { path: "/clearance", title: "Clearance"},
+    { path: "/warehouselist", title: "Deals"},
+    { path: "/", title: "Home"}
+];
+
+const  activeStyle={
+        textDecoration : 'none',
+        color : 'red',
+        padding:'10px'
+      }
+      
+const  defaultStyle={
+        textDecoration : 'none',
+        color  : 'black',
+        padding:'10px'
+           
+    }
 
 const Navbar = () => {
+    
+   
+
   return (
     <>
       <Box w="100%" h="166px" bg=" #0066ff">
@@ -255,6 +282,8 @@ const Navbar = () => {
                           <Text as="b">CZ Warehouse</Text>
                           <Text as="b">EU-3 Warehouse</Text>
                           <Text as="b">HU Warehouse</Text>
+                         
+
                         </VStack>
                         <Image
                           src="https://img.gkbcdn.com/cim/category-1301-6ETJOmbg._p1_.png"
@@ -674,13 +703,28 @@ const Navbar = () => {
             </Box>
             {/* right */}
 
-            <Button variant="ghost"> New</Button>
+            {/* <Button variant="ghost"> New</Button>
             <Button variant="ghost">Bestselling</Button>
             <Button variant="ghost">Brand</Button>
             <Button variant="ghost">Clearance</Button>
             <Button variant="ghost">Deals</Button>
             <Button variant="ghost">Coupon</Button>
-            <Button variant="ghost">App Only</Button>
+            <Button variant="ghost">App Only</Button> */}
+            <Box>
+            {links.map((link) => (
+        <NavLink
+          style={{padding:'24px'}}
+          className={({ isActive }) => {
+            return isActive ? activeStyle : defaultStyle;
+          }}
+          key={link.path}
+          to={link.path}
+          end
+        >
+          {link.title}
+        </NavLink>
+      ))}
+            </Box>
             <Image
               src="https://img.gkbcdn.com/s3/bn/2209/174x35b-631b1e9b2b40c9215c578605.gif"
               alt="offer"
