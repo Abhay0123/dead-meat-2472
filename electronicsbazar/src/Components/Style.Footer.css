@@ -173,21 +173,6 @@
     text-align: center;
 }
 
-.footerSeventhPart{
-    text-align: center;
-}
-
-.footerSeventhPart>p{
-    padding: 13px 0;
-   color: white;
-   background-color: gray;
-    font-size: 16px;
-    display: flex;
-    justify-content:space-evenly;
-    font-family: "Open Sans", sans-serif !important;
-}
-
-
 
 
 .footerDropDown{
