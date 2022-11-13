@@ -40,11 +40,11 @@
     border: 1px solid transparent;
     background-color: #0066ff;
     font-weight:400;
-    font-size:16px;
+    font-size:18px;
     font-family: "Open Sans", sans-serif;
     color: white;
-    padding-left: 15px;
-    padding-right:15px;
+    padding: 10px;
+    
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }

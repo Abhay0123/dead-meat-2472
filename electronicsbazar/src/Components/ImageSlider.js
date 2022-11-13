@@ -1,4 +1,4 @@
-import { flexbox } from "@chakra-ui/react";
+
 import {useState,useEffect} from "react";
 const ImageSlider=({slides})=>{
     const [currentIndex,setCurrentIndex]=useState(0);

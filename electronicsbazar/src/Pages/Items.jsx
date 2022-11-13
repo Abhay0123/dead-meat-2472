@@ -1,24 +1,39 @@
 import axios from 'axios';
-import {Box,Text,SimpleGrid,Image,Heading,Stack} from '@chakra-ui/react';
+import {Box,Text,SimpleGrid,Image,Heading,Container,Button} from '@chakra-ui/react';
 import {useState,useEffect} from 'react';
+const Loading=()=>{
+    return(
+      <Container>
+        <Image w='200px' h='200px' ml='180px'  src='https://reiwa.com.au/ux/reiwa/ux/images/pd/spinner.gif'/>
+      </Container>
+      
+    )
+   }
 const Items=()=>{
+    const [isLoading, setIsLoading] = useState(false)
     const [data,setData]=useState([]);
+    const [page, setPage] = useState(1);
     const getData=()=>{
-        axios.get('http://localhost:8000/Items')
+        setIsLoading(true)
+        axios.get(`http://localhost:3000/Items?_page=${page}&_limit=20`)
         .then((res)=>{
             setData(res)
+            setIsLoading(false)
           console.log(res.data)
         })
         .catch((error)=>{
+            setIsLoading(false)
             console.log(error)
+
         })
       }
       useEffect(()=>{
-        getData();
-      },[])
+        getData(page);
+      },[page])
      
 
-    return(
+    return( isLoading ? ( <Loading/>) : (
+
     <Box>
         <Box>
          <Box>
@@ -70,19 +85,36 @@ const Items=()=>{
               alignItems: "center"
             }}
           >
-           
             <Image src={el.PicturePath}></Image>
-            <Image width='60px' ml='-150px' src='https://img.gkbcdn.com/s3/bn/2211/1111-636b8e9c2b40c926000ab10a.gif'></Image>
-            <Text>{el.Name}</Text>
+            <Text ml='-150px' display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='10px' color='white' fontSize='xs'  width='55px'>{el.Discount}% OFF</Text>
+            <Box
+          mt='1'
+          as='h4'
+          
+          lineHeight='tight'
+          noOfLines={2}
+        >
+         {el.Name}
+        </Box>
              <Text ml='-150px' fontWeight='600' fontSize='large'>{el.SalePrice}</Text>
              <Text ml='-150px' fontSize='large'>{el.CsSalesPrice}</Text>
           </Box>
         ))}
     </SimpleGrid>
     </Box>
+    <Box mb='10px'bg=' #f1f6fd' padding='30px'>
+    <Button   colorScheme='teal' variant='outline' disabled={page === 1} onClick={() => setPage(page - 1)}>
+        PREV
+      </Button>
+      <Button colorScheme='blue' m='30px'>{page}</Button>
+      <Button colorScheme='teal' variant='outline' disabled={page >= 9} onClick={() => setPage(page + 1)}>
+        NEXT
+      </Button>
+    </Box>
 </Box>
     </Box>
     </Box>
+    )
     )
 }
 export default Items;
