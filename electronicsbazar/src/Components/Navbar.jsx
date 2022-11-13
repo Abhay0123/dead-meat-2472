@@ -18,19 +18,22 @@ import {
   VStack
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
-//import AllRoutes from "../Pages/AllRoutes";
+
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { BsCart } from "react-icons/bs";
 
 import { HiOutlineUser } from "react-icons/hi";
    
 const links = [
-    { path: "/newarrivals", title: "New"},
+    { path: "/newarrivals", title: <Text bg='red' as={"b"}>NEW</Text>},
     { path: "/bestselling", title: "Bestselling"},
     { path: "/items", title: " Brand"},
     { path: "/clearance", title: "Clearance"},
     { path: "/warehouselist", title: "Deals"},
-    { path: "/", title: "Home"}
+    { path: "/", title: "Home"},
+    { path: "/newarrivals/:ID", title: "cart"}
+   
+    
 ];
 
 const  activeStyle={
@@ -196,11 +199,14 @@ const Navbar = () => {
         {/* middle navbar */}
         <Box ml="100px" mt="10px">
           <HStack spacing="24px" color="white">
-            <Box w="230px" p="10px">
+         
+            <Box w="230px" p="10px" >
+               <Link href="/">
               <Image
                 src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png"
                 alt="logo"
-              ></Image>
+               
+              ></Image> </Link>
             </Box>
             <Box>
               <Stack spacing={8}>
@@ -701,15 +707,7 @@ const Navbar = () => {
                 </ul>
               </Box>
             </Box>
-            {/* right */}
-
-            {/* <Button variant="ghost"> New</Button>
-            <Button variant="ghost">Bestselling</Button>
-            <Button variant="ghost">Brand</Button>
-            <Button variant="ghost">Clearance</Button>
-            <Button variant="ghost">Deals</Button>
-            <Button variant="ghost">Coupon</Button>
-            <Button variant="ghost">App Only</Button> */}
+          
             <Box>
             {links.map((link) => (
         <NavLink
@@ -725,10 +723,11 @@ const Navbar = () => {
         </NavLink>
       ))}
             </Box>
+            <Link href='/categories'>
             <Image
               src="https://img.gkbcdn.com/s3/bn/2209/174x35b-631b1e9b2b40c9215c578605.gif"
               alt="offer"
-            ></Image>
+            ></Image></Link>
           </Box>
         </Box>
       </Box>

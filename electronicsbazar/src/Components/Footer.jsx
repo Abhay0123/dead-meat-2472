@@ -1,4 +1,4 @@
-import {Box,Text, Image,Link,Stack, HStack} from '@chakra-ui/react';
+import {Box,Text, Image,Link, HStack} from '@chakra-ui/react';
 import { FaFacebookSquare ,FaTelegramPlane,FaTiktok} from 'react-icons/fa';
 import { ImInstagram, ImTwitter} from 'react-icons/im';
 import { GrYoutube,GrMail } from 'react-icons/gr';
@@ -15,8 +15,8 @@ const Footer=()=>{
       <div className="footerFirstPart">
         <Text>Why buy from geekbuying? <span className="footerPlus">+</span></Text>
       </div>
-      <div className="footerSecondPart">
-        <input placeholder="Enter eamil to get a 5% off coupon" type="text" />
+      <div className="footerSecondPart" height='50px'>
+        <input h='50px' placeholder="Enter eamil to get a 5% off coupon" type="text" />
         <Box><Text>Subscribe</Text></Box>
       </div>
       <Box className="footerThirdPart">

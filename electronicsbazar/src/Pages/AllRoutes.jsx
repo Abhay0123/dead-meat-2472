@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../Components/HomePage";
 import BestSelling from "./BestSelling";
-//import Categories from "./Categories";
+import Categories from "./Categories";
 import Clearance from "./Clearance";
 import Items from "./Items";
 import NewArrivals from "./NewArrivals";
 import WareHouseList from "./WareHouseList";
-
-//import SingleUserPage from "./SingleUserPage";
+import SingleProduct from "./SingleProductPage";
+import CheckoutPage from "./CheckoutPage";
 //import PageNotFound from "./NotFoundPage";
 //import PrivateRoute from "../Components/PrivateRoute";
 
@@ -20,6 +20,9 @@ function AllRoutes() {
       <Route path="/items" element={<Items />}></Route>
       <Route path="/newarrivals" element={<NewArrivals />}></Route>
       <Route path="/warehouselist" element={<WareHouseList />}></Route>
+      <Route path="/newarrivals/:ID" element={<SingleProduct />}></Route>
+      <Route path="/checkoutpage" element={<CheckoutPage />}></Route>
+           <Route path="/categories" element={<Categories />}></Route>
     </Routes>
   );
 }

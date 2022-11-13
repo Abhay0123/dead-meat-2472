@@ -1,7 +1,7 @@
-import {Box,SimpleGrid,HStack,Image,Text,Heading,GridItem,Grid}  from '@chakra-ui/react';
+import {Box,SimpleGrid,HStack,Image,Text,Heading,GridItem}  from '@chakra-ui/react';
 import React, { useState,useEffect,useRef } from 'react'
 import ImageSlider from './ImageSlider.js';
-import NewArrivals from '../Pages/NewArrivals.jsx';
+
 const LandingPage=()=>{
     const [imgInd, setImgInd] = useState(0);
     const timeoutRef = useRef(null);
@@ -15,17 +15,7 @@ const LandingPage=()=>{
          {id:'7',url:'https://img.gkbcdn.com/bn/2211/740x670-636382c52b40c94424fc21e0._p1_.jpg'}
     ]
 
-    // const LatestItem=[
-    //      {url:''},
-    //      {url:''},
-    //      {url:''},
-    //      {url:''},
-    //      {url:''},
-    //      {url:''},
-    //      {url:''},
-    //      {url:''},
-
-    // ]
+ 
     const PopularBrandimages = [
          "https://img.gkbcdn.com/bn/2205/1500x260-628f67db2b40c91f8ca376f8._p1_.jpg",
         "https://img.gkbcdn.com/bn/2205/1500x2602-628f67e92b40c91f8ca376f9._p1_.jpg",
@@ -157,17 +147,19 @@ const LandingPage=()=>{
    {/* New For You */}
      <Box padding='10px' bg='#f1f6fd' color='white'>
      <Text align='left' fontSize='30px' fontWeight='800'>New For You</Text>
-     <SimpleGrid>
+     <SimpleGrid  padding='20px' columns={4}>
        <Box>
-        <Image src='https://img.gkbcdn.com/bn/2211/5-636a188c2b40c958a00d243d._p1_.jpg'></Image>
+       <Image src='https://img.gkbcdn.com/bn/2211/5-636a188c2b40c958a00d243d._p1_.jpg'></Image>
        </Box>
        <Box>
-           
+       <Image src='https://img.gkbcdn.com/p/2022-11-04/Q26-Pro-Smartwatch-1-83---TFT-Screen-Black-518108-0._w280_p1_.jpg'></Image>
        </Box>
-        
-
-
-
+       <Box>
+       <Image src='https://img.gkbcdn.com/p/2020-07-23/Proscenic-P10-Wireless-Hand-Held-Vacuum-Cleaner-Portable-Rechargeable-425841-1._w280_p1_.jpg'></Image>
+       </Box>
+       <Box>
+       <Image src='https://img.gkbcdn.com/p/2022-03-14/Anbernic-RG280V-Retro-Handheld-Game-Console-Add-32GB-TF-Card-Golden-497776-0._w280_.jpg'></Image>
+       </Box>
     </SimpleGrid>
      
     </Box>
@@ -241,10 +233,10 @@ const LandingPage=()=>{
        </Box>
          </HStack>
           {/* Best Sellers  */}
-        <Heading>Best Sellers </Heading>
+        {/* <Heading>Best Sellers </Heading>
         <Box w='100%' h='400px' bg='gray' mt='20px' mb='20px'>
     
-       </Box>
+       </Box> */}
     {/* Popular Brands */}
     
     <Heading>Popular Brands </Heading>
@@ -255,10 +247,10 @@ const LandingPage=()=>{
          </Box>
         </Box>
         {/*Lower Section of this page  */}
-        <Box border='1px solid gray' w='100%' h='280px' borderRadius='8px'>
+        <Box border='1px solid gray' w='100%' h='280px' borderRadius='8px' mb='30px'>
           <HStack >
                  <Box w='33%'>
-                    <Image   src='https://img.gkbcdn.com/bb/tronsmart-20221007152616686._p1_.jpg'></Image>
+                    <Image borderRadius='4px'  src='https://img.gkbcdn.com/bb/tronsmart-20221007152616686._p1_.jpg'></Image>
                  </Box>
                  <Box w='67%'>
                     <HStack>
@@ -301,7 +293,153 @@ const LandingPage=()=>{
 
           </HStack>
       </Box>
-              
+
+      <Box border='1px solid gray' w='100%' h='277px' borderRadius='8px' mb='30px'>
+          <HStack >
+                 <Box w='33%'>
+                    <Image  borderRadius='4px' src='https://img.gkbcdn.com/bb/engwe-20221110163953412._p1_.jpg'></Image>
+                 </Box>
+                 <Box w='67%'>
+                    <HStack>
+                        <Box align='left'>
+                            <Image w='160px' src='https://img.gkbcdn.com/p/2022-05-16/engwe-ep-2-pro-folding-electric-moped-bicycle-750w-motor-black-f02f83-1652693914387._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>38% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart T6 Plus Upgraded Edition</Text>
+                            <Text as='b'>€51.13</Text>
+                            <br />
+                            <Text as='s'>€81.81</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-07-11/ENGWE-T14-Folding-Electric-Bicycle-14-Inch-Tire-508466-0._w280_p1_.jpg'></Image>
+                            <Text  display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>50% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm'>Tronsmart Apollo Q10 ANC Active Noise</Text>
+                            <Text as='b'>€30.67</Text>
+                            <br />
+                            <Text as='s'>€61.36</Text>
+                        </Box>
+                         <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-02-24/engwe-c20-pro-folding-electric-bicycle-67247a-1645673469050._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'> 36% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart Element T6 Max 60W Bluetooth 5.0</Text>
+                            <Text as='b'>€65.45</Text>
+                            <br />
+                            <Text as='s'>€102.27</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-10-28/engwe-engine-pro-folding-electric-bicycle-750w-48v-16ah-battery-black-77682a-1666945658891._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>40% OFF</Text>
+                            <Text fontSize='sm'>Tronsmart Onyx Ace Pro TWS Earbuds, Qualcomm</Text>
+                                 
+                            <Text as='b'>€24.54</Text>
+                            <br />
+                            <Text as='s'>€40.90</Text>
+                        </Box>
+                    </HStack>
+
+                 </Box>
+
+          </HStack>
+      </Box>
+
+      <Box border='1px solid gray' w='100%' h='280px' borderRadius='8px' mb='30px'>
+          <HStack >
+                 <Box w='33%'>
+                    <Image borderRadius='4px'  src='https://img.gkbcdn.com/bb/sculpfun-20221007152503762._p1_.jpg'></Image>
+                 </Box>
+                 <Box w='67%'>
+                    <HStack>
+                        <Box align='left'>
+                            <Image w='160px' src='https://img.gkbcdn.com/p/2021-12-22/SCULPFUN-S9-Laser-Engraver-481991-0._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>38% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart T6 Plus Upgraded Edition</Text>
+                            <Text as='b'>€51.13</Text>
+                            <br />
+                            <Text as='s'>€81.81</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-09-23/SCULPFUN-S30-Pro-10W-Laser-Engraver-Cutter-517192-0._w280_p1_.jpg'></Image>
+                            <Text  display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>50% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm'>Tronsmart Apollo Q10 ANC Active Noise</Text>
+                            <Text as='b'>€30.67</Text>
+                            <br />
+                            <Text as='s'>€61.36</Text>
+                        </Box>
+                         <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-05-12/Sculpfun-S10-Laser-Engraver-500429-0._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'> 36% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart Element T6 Max 60W Bluetooth 5.0</Text>
+                            <Text as='b'>€65.45</Text>
+                            <br />
+                            <Text as='s'>€102.27</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-05-09/Sculpfun-Honeycomb-Panel-400x400mm-500292-0._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>40% OFF</Text>
+                            <Text fontSize='sm'>Tronsmart Onyx Ace Pro TWS Earbuds, Qualcomm</Text>
+                                 
+                            <Text as='b'>€24.54</Text>
+                            <br />
+                            <Text as='s'>€40.90</Text>
+                        </Box>
+                    </HStack>
+
+                 </Box>
+
+          </HStack>
+      </Box>
+
+
+      <Box border='1px solid gray' w='100%' h='280px' borderRadius='8px' mb='30px'>
+          <HStack >
+                 <Box w='33%'>
+                    <Image  borderRadius='4px' src='https://img.gkbcdn.com/bb/creality-20221007150037712._p1_.jpg'></Image>
+                 </Box>
+                 <Box w='67%'>
+                    <HStack>
+                        <Box align='left'>
+                            <Image w='160px' src='https://img.gkbcdn.com/p/2022-03-02/creality-ender-3-s1-pro-3d-printer-c9e30b-1646215071933._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>38% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart T6 Plus Upgraded Edition</Text>
+                            <Text as='b'>€51.13</Text>
+                            <br />
+                            <Text as='s'>€81.81</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-07-09/creality-ender-3-v2-3d-printer-with-upgraded-32-bit-silent-motherboard-732f54-1657351329700._w280_.JPG'></Image>
+                            <Text  display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>50% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm'>Tronsmart Apollo Q10 ANC Active Noise</Text>
+                            <Text as='b'>€30.67</Text>
+                            <br />
+                            <Text as='s'>€61.36</Text>
+                        </Box>
+                         <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-05-24/Creality-CR-Scan-Lizard-3D-Scanner-501259-0._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'> 36% OFF</Text>
+                            <Text noOfLines={2} fontSize='sm' >Tronsmart Element T6 Max 60W Bluetooth 5.0</Text>
+                            <Text as='b'>€65.45</Text>
+                            <br />
+                            <Text as='s'>€102.27</Text>
+                        </Box>
+                        <Box align='left'>
+                            <Image  w='160px' src='https://img.gkbcdn.com/p/2022-10-31/creality-ender-3-s1-3d-printer-303cda-1667202443810._w280_p1_.jpg'></Image>
+                            <Text display='flex' justifyContent='center' alignItems='center' bg='red' borderRadius='6px' color='white' fontSize='xs'  width='80px'>40% OFF</Text>
+                            <Text fontSize='sm'>Tronsmart Onyx Ace Pro TWS Earbuds, Qualcomm</Text>
+                                 
+                            <Text as='b'>€24.54</Text>
+                            <br />
+                            <Text as='s'>€40.90</Text>
+                        </Box>
+                    </HStack>
+
+                 </Box>
+
+          </HStack>
+      </Box>
+
+
+
+
+
         </Box>
     )
 }
