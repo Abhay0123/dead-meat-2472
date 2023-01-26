@@ -15,7 +15,7 @@ const Items=()=>{
     const [page, setPage] = useState(1);
     const getData=()=>{
         setIsLoading(true)
-        axios.get(`http://localhost:3000/Items?_page=${page}&_limit=20`)
+        axios.get(`https://api-pathak-database.vercel.app/Items?_page=${page}&_limit=20`)
         .then((res)=>{
             setData(res)
             setIsLoading(false)

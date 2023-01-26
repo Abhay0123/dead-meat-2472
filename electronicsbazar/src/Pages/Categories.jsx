@@ -16,7 +16,7 @@ const Categories=()=>{
     const [page, setPage] = useState(1);
     const getData=()=>{
         setIsLoading(true)
-        axios.get(`http://localhost:3000/Categories?_page=${page}&_limit=20`)
+        axios.get(`http://localhost:5050/Categories?_page=${page}&_limit=20`)
         .then((res)=>{
             setData(res)
             setIsLoading(false)

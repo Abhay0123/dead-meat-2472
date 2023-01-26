@@ -1,4 +1,4 @@
-import {Box,SimpleGrid,HStack,Image,Text,Heading,GridItem}  from '@chakra-ui/react';
+import {Box,SimpleGrid,HStack,Image,Text,Heading}  from '@chakra-ui/react';
 import React, { useState,useEffect,useRef } from 'react'
 import ImageSlider from './ImageSlider.js';
 
@@ -38,7 +38,7 @@ const LandingPage=()=>{
           return () => {
             resetTimeout();
           };
-        }, [imgInd]);
+        }, [imgInd,PopularBrandimages.length]);
     
     
       

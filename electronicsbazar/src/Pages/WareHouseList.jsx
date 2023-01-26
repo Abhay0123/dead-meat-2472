@@ -10,12 +10,14 @@ const Loading=()=>{
     )
    }
 const WarehouseList=()=>{
+
     const [isLoading, setIsLoading] = useState(false)
     const [data,setData]=useState([]);
     const [page,setPage] =useState(1);
+    
     const getData=()=>{
         setIsLoading(true)
-        axios.get(`http://localhost:3000/WarehouseList?_page=${page}&_limit=20`)
+        axios.get(`https://api-pathak-database.vercel.app/WarehouseList?_page=${page}&_limit=20`)
         .then((res)=>{
             setData(res)
             setIsLoading(false)

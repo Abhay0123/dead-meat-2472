@@ -7,7 +7,10 @@ import Items from "./Items";
 import NewArrivals from "./NewArrivals";
 import WareHouseList from "./WareHouseList";
 import SingleProduct from "./SingleProductPage";
-import CheckoutPage from "./CheckoutPage";
+import Cart from "./Cart";
+import Checkout from "./Checkout";
+import Payment from "./Payment";
+
 //import PageNotFound from "./NotFoundPage";
 //import PrivateRoute from "../Components/PrivateRoute";
 
@@ -20,8 +23,11 @@ function AllRoutes() {
       <Route path="/items" element={<Items />}></Route>
       <Route path="/newarrivals" element={<NewArrivals />}></Route>
       <Route path="/warehouselist" element={<WareHouseList />}></Route>
-      <Route path="/newarrivals/:ID" element={<SingleProduct />}></Route>
-      <Route path="/checkoutpage" element={<CheckoutPage />}></Route>
+      <Route path="/newarrivals/:id" element={<SingleProduct />}></Route>
+      <Route path="/cart" element={<Cart />}></Route>
+      <Route path="/checkout" element={<Checkout />}></Route>
+      <Route path="/checkout/payment" element={<Payment />}></Route>
+      
            <Route path="/categories" element={<Categories />}></Route>
     </Routes>
   );

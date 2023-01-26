@@ -15,8 +15,8 @@ const Footer=()=>{
       <div className="footerFirstPart">
         <Text>Why buy from geekbuying? <span className="footerPlus">+</span></Text>
       </div>
-      <div className="footerSecondPart" height='50px'>
-        <input h='50px' placeholder="Enter eamil to get a 5% off coupon" type="text" />
+      <div className="footerSecondPart" >
+        <input  placeholder="Enter eamil to get a 5% off coupon" type="text" />
         <Box><Text>Subscribe</Text></Box>
       </div>
       <Box className="footerThirdPart">
@@ -127,7 +127,7 @@ const Footer=()=>{
          <Image src='https://content1.geekbuying.com/V1.4/en/images/indexV7/foot_icon.png' alt=''></Image>
             </Box>
      <Box>
-      <HStack bg='gray' color='white' gap='10px' padding='6px'>  
+      <HStack className='f-lowest' color='white' gap='10px' padding='6px'>  
          <Box>
         <Text>We use cookies to ensure that we give you the best experience on our website.
             By continuing to browse the site, you agree to our use of<Link as='mark'> cookies.</Link></Text></Box>

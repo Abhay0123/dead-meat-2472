@@ -1,83 +1,118 @@
-body {
+* {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.deepmenu1,.deepmenu2,.deepmenu3,.deepmenu4{
+.deepmenu1,
+.deepmenu2,
+.deepmenu3,
+.deepmenu4 {
   display: none;
 }
-.active1:hover .deepmenu1,.active2:hover .deepmenu2,.active3:hover .deepmenu3{
+.active1:hover .deepmenu1,
+.active2:hover .deepmenu2,
+.active3:hover .deepmenu3 {
   display: block;
-  position:absolute;
+  position: absolute;
   text-align: left;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-size: 18px;
   font-weight: 200;
   padding: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   border-radius:10px; 
+  border-radius: 10px;
   background-color: white;
-  color : black;
+  color: black;
 }
-.active2:hover .deepmenu2{
+.active2:hover .deepmenu2 {
   height: 400px;
-  overflow-y:scroll;
-
+  overflow-y: scroll;
 }
 
-.active4:hover .deepmenu4{
+.active4:hover .deepmenu4 {
   display: block;
-  position:absolute;
+  position: absolute;
   text-align: left;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: white;
-  color : black;
-  padding: 6px;
-  
-}
-.deepmenu4 div{
+  color: black;
   padding: 6px;
 }
-.deepmenu4 div:hover{
-  
+
+ul > div p:first-child {
+  padding: 6px 0px;
+}
+/* ul>div p:first-child:hover {
+ cursor: pointer;
   background-color: rgba(0, 0, 255, 0.075);
-}
-.localWarehouse,.sportsAndoutdoors,.smartHome,.consumerElectronics,
-.generators,.computers,.TvBoxes,.Toys,.phones,.Automobiles,.security,.wearableDevices{
+  border-left: 3px solid blue;
+
+  z-index: 999;
+} */
+.localWarehouse,
+.sportsAndoutdoors,
+.smartHome,
+.consumerElectronics,
+.generators,
+.computers,
+.TvBoxes,
+.Toys,
+.phones,
+.Automobiles,
+.security,
+.wearableDevices {
   display: none;
 }
-.first:hover .localWarehouse ,
+.first:hover,
+.second:hover,
+.third:hover,
+.forth:hover,
+.fifth:hover,
+.sixth:hover,
+.seventh:hover,
+.eighth:hover,
+.ninth:hover,
+.tenth:hover,
+.eleventh:hover,
+.twelth:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.075);
+  border-left: 3px solid blue;
+
+  z-index: 999;
+}
+
+.first:hover .localWarehouse,
 .second:hover .sportsAndoutdoors,
 .third:hover .smartHome,
 .forth:hover .consumerElectronics,
 .fifth:hover .generators,
-.sixth:hover .computers, 
+.sixth:hover .computers,
 .seventh:hover .TvBoxes,
 .eighth:hover .Toys,
 .ninth:hover .phones,
 .tenth:hover .Automobiles,
 .eleventh:hover .security,
-.twelth:hover .wearableDevices
-{
+.twelth:hover .wearableDevices {
   display: block;
   position: absolute;
   cursor: pointer;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 999;
+  padding: 10px;
 }
 .slider {
   display: flex;
   flex-direction: row;
-   gap:5px;
- 
+  gap: 5px;
+
   justify-content: center;
   margin-top: -30px;
 }
@@ -92,27 +127,143 @@ code {
 .slider > .active {
   background-color: rgb(23, 11, 187);
   border-color: rgb(2, 0, 128);
-
-
 }
-.eachBox:hover a{
-   box-shadow: rgba(0, 0, 0, 0.09) 0px 5px 15px; ;
+.eachBox:hover {
+  box-shadow: rgba(0, 0, 0, 0.342) 0px 5px 15px;
 }
-.brandlogo{
+.brandlogo {
   width: 80px;
   height: 40px;
-
-}
-.hoverToIncreaseWidth:hover{
-    width:300px;
-    cursor: pointer;
 }
 
-.Theading Th{
+.Theading Th {
   color: white;
   font-weight: 100;
-  font-size:14px;
-  
+  font-size: 14px;
+
   padding: 10px;
-  
+}
+.na-products-grid {
+  display: grid;
+  grid-template-columns: (0.2fr, 0.9fr);
+  grid-template-rows: repeat(1fr);
+}
+.alldropdown summary,
+.alldropdown li {
+  list-style: none;
+  text-align: left;
+  font-style: normal;
+
+  padding: 3px;
+  cursor: pointer;
+}
+.alldropdown ul {
+  font-size: large;
+}
+.alldropdown li {
+  margin-left: 6px;
+  font-size: small;
+  color: rgba(128, 128, 128, 0.849);
+}
+.sort-text-byPrice div,
+.sort-text-byDiscount div {
+  width: max-content;
+  border: 1px solid rgba(128, 128, 128, 0.747);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2px;
+}
+.sort-text-byDiscount div {
+  border: 0px solid;
+}
+
+.mc-img {
+  background-position: -4px 0;
+}
+.money-img {
+  background-position: -4px -23px;
+}
+.tax-img {
+  width: 62px;
+  background-position: 0px -161px;
+}
+.product-img {
+  width: 80px;
+  height: 20px;
+  margin-top: 12px;
+  display: inline-block;
+}
+.product-img {
+  background-image: url("https://content1.geekbuying.com/V1.4/en/images/indexV7/product_img.png");
+  background-repeat: no-repeat;
+}
+.share-logo {
+  transition: 300ms ease-in-out;
+}
+.share-logo div:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+.img-hover img {
+  border: 1px solid rgba(128, 128, 128, 0.712);
+  padding: 5px;
+  cursor: pointer;
+}
+.img-hover img:hover {
+}
+.cart-shown {
+  border: 1px solid rgba(128, 128, 128, 0.568);
+  border-radius: 6px;
+  padding: 12px;
+}
+.cartbox {
+  border: 1px solid rgba(128, 128, 128, 0.541);
+  border-radius: 6px;
+  padding: 6px;
+  margin-top: 20px;
+}
+
+.form-address-fill,
+.checkout-product-view,
+.grand-total {
+  width: 90%;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid rgba(128, 128, 128, 0.671);
+  border-radius: 6px;
+}
+.form-address-fill input,
+.form-address-fill select {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.grand-total {
+  display: block;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.grand-total div {
+  width: max-content;
+}
+
+.payment-body>div{
+  border: 1px solid rgba(128, 128, 128, 0.541);
+  border-radius: 6px;
+}
+
+.order-grand >div{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.debitcard{
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

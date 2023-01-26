@@ -198,3 +198,6 @@
 .footerDropDown>div>p:last-child{
     margin-top: -10px;
 }
+.f-lowest{
+    background-color:rgba(0, 0, 0, 0.521);
+}

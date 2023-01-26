@@ -23,6 +23,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { BsCart } from "react-icons/bs";
 
 import { HiOutlineUser } from "react-icons/hi";
+import { useEffect, useRef, useState } from "react";
    
 const links = [
     { path: "/newarrivals", title: <Text bg='red' as={"b"}>NEW</Text>},
@@ -31,7 +32,7 @@ const links = [
     { path: "/clearance", title: "Clearance"},
     { path: "/warehouselist", title: "Deals"},
     { path: "/", title: "Home"},
-    { path: "/newarrivals/:ID", title: "cart"}
+    { path: "/cart", title: "Cart"}
    
     
 ];
@@ -50,9 +51,46 @@ const  defaultStyle={
     }
 
 const Navbar = () => {
-    
-   
 
+  // const url = `https://api-pathak-database.vercel.app/Items`
+  // const ref = useRef(null)
+  // const [hiddenDiv, setHiddenDiv] = useState(false)
+  // const [data, setData] = useState([])
+  // const [searchVal, setSearchVal] = useState("");
+  // useEffect(()=>{
+  //   fetchData(searchVal)
+  // },[searchVal])
+  // const fetchData=(searchVal)=>{
+  //   fetch(`${url}?_limit=5&q=${searchVal}`)
+  //   .then((res)=>res.json())
+  //   .then((res)=>{
+  //     // setData(res)
+  //     setData(res)
+  //     console.log(res, " search input data after fetched ");
+  //   })
+  // }
+  // const debounce = (fn, timeout)=>{
+  //   let timerid;
+  //   return ()=>{
+  //     clearTimeout(timerid)
+  //     timerid = setTimeout(() => {
+  //       fn()
+  //     }, timeout);
+  //   }
+  // }
+  // const handleinput = debounce(()=>{
+  //   const val = ref.current.value
+  //   console.log(" event val check in debounce ", val);
+  //   setHiddenDiv(true)
+  //   setSearchVal(val)
+  // }, 500)
+
+  // window.addEventListener("click",(e)=>{
+  //   console.log(e.target.id, " check window ");
+  //   if(e.target.id!=="inputBox"){
+  //     setHiddenDiv(false)
+  //   }
+  // })
   return (
     <>
       <Box w="100%" h="166px" bg=" #0066ff">
@@ -66,7 +104,7 @@ const Navbar = () => {
         >
           <Box>
             <Box className="active1">
-              <a href="#">Save BIG with our app! </a>
+              <Text>Save BIG with our app! </Text>
               <div className="deepmenu1" w="200px">
                 <ul style={{ display: "inline-block" }} className="menu">
                   <div>
@@ -108,65 +146,65 @@ const Navbar = () => {
 
           <Box h={200}>
             <Box className="active2">
-              <a >Language </a>
+              <Text >Language </Text>
               <div className="deepmenu2">
                 <ul style={{ display: "inline-block" }} className="menu">
                   <div>
-                    <a >English</a>
+                    < >English</>
                   </div>
                   <div>
-                    <a >Italiano</a>
+                    <Text >Italiano</Text>
                   </div>
                   <div>
-                    <a >Deutsch</a>
+                    <Text >Deutsch</Text>
                   </div>
                   <div>
-                    <a >Español</a>
+                    <Text >Español</Text>
                   </div>
                   <div>
-                    <a >Français</a>
+                    <Text >Français</Text>
                   </div>
                   <div>
-                    <a >Português</a>
+                    <Text >Português</Text>
                   </div>
                   <div>
-                    <a >Slovenčina</a>
+                    <Text >Slovenčina</Text>
                   </div>
                   <div>
-                    <a >Magyar</a>
+                    <Text >Magyar</Text>
                   </div>
                   <div>
-                    <a >Slovenščina</a>
+                    <Text >Slovenščina</Text>
                   </div>
                   <div>
-                    <a >Lietuvių kalba</a>
+                    <Text >Lietuvių kalba</Text>
                   </div>
                   <div>
-                    <a >Svenska</a>
+                    <Text >Svenska</Text>
                   </div>
                   <div>
-                    <a>Ελληνικά</a>
+                    <Text>Ελληνικά</Text>
                   </div>
                   <div>
-                    <a>Dansk</a>
+                    <Text>Dansk</Text>
                   </div>
                   <div>
-                    <a >עברית</a>
+                    <Text >עברית</Text>
                   </div>
                   <div>
-                    <a >Hrvatski jezik</a>
+                    <Text >Hrvatski jezik</Text>
                   </div>
                   <div>
-                    <a >Polskie</a>
+                    <Text >Polskie</Text>
                   </div>
                   <div>
-                    <a >Limba română</a>
+                    <Text >Limba română</Text>
                   </div>
                   <div>
-                    <a>Čeština</a>
+                    <Text>Čeština</Text>
                   </div>
                   <div>
-                    <a>Japanese </a>
+                    <Text>Japanese </Text>
                   </div>
                 </ul>
               </div>
@@ -175,20 +213,20 @@ const Navbar = () => {
 
           <Box>
             <Box className="active3">
-              <a >Support Center</a>
+              <Text >Support Center</Text>
               <div className="deepmenu3">
                 <ul style={{ display: "inline-block" }} className="menu">
                   <div>
                     {" "}
-                    <a >Live Chat</a>
+                    <Text >Live Chat</Text>
                   </div>
                   <div>
                     {" "}
-                    <a >Ticket</a>
+                    <Text >Ticket</Text>
                   </div>
                   <div>
                     {" "}
-                    <a >Help Center</a>
+                    <Text >Help Center</Text>
                   </div>
                 </ul>
               </div>
@@ -228,8 +266,61 @@ const Navbar = () => {
                     w="550px"
                     type="tel"
                     placeholder="Search By Keywords"
-                    bg="white"
+                    bg="gray"
                   />
+                   {/* <Box w="34%" pos={'relative'}>
+            <InputGroup>
+              <Input
+                placeholder="Search for products,brands and more"
+                bg="gray"
+                w="550px"
+                borderRadius="2px"
+                h="36px"
+                fontSize="14px"
+                ref={ref}
+                onInput={handleinput}
+                id='inputBox'
+              />
+              
+            </InputGroup>
+            <Box
+              display={hiddenDiv?"":"none"}
+              pos={'absolute'} zIndex={'10'}
+              maxH='320px' overflowY={'auto'}
+              borderRadius='0 0 2px 2px'
+              borderTop={'1px solid #e0e0e0'}
+              w='100%'
+              bg='#fff'
+              boxShadow={'2px 3px 5px -1px rgb(0 0 0 / 50%)'}
+            >
+              {
+                data.map((item, index)=>(
+                  <Box key={index} color='gray'>
+                    <NavLink to={`/newarrivals/:ID`}>
+                      <Flex gap={2} p='10px 25px' m='10px 0'
+                      align={'center'}
+                      cursor='pointer'
+                      _hover={{bg:"#F5F8FF"}}
+                      // onClick={()=>handleSetQuaryUrl(item.query_url)}
+                      >
+                        <Box maxH='52px' w='52px'>
+                          <Image maxH='30px' maxW='32px' src=
+                          {item.PicturePath}
+                          // {item.thumbnail}item.LinkUrl+
+                          />
+                        </Box>
+                        <Box color={'#212121'}
+                        >
+                          {item.Name}
+                          
+                        </Box>
+                      </Flex>
+                    </NavLink>
+                  </Box>
+                ))
+              }
+            </Box>
+          </Box> */}
                 </InputGroup>
               </Stack>
             </Box>
@@ -246,7 +337,7 @@ const Navbar = () => {
           </HStack>
         </Box>
         {/* Bottom navbar */}
-        <Box style={{ color: "white" }} ml="-240px" mt="12px">
+        <Box style={{ color: "white" }} ml="-240px" mt="15px">
           <Box
             style={{
               display: "flex",
@@ -255,22 +346,24 @@ const Navbar = () => {
             }}
           >
             <Box className="active4">
-              <Box bg="blue.300" borderRadius="10px 10px 0px 0px" p="10px">
-                <a >
+              <Box bg="blue.200" borderRadius="6px 6px 0px 0px" mt='5px' p="7px">
+                <Box >
                   <HamburgerIcon /> Categories
-                </a>
+                </Box>
               </Box>
-              <Box className="deepmenu4">
+              <Box className="deepmenu4" pos='relative'>
                 <ul style={{ display: "inline-block" }} className="menu">
                   <Box className="first">
-                    <a className="first">
+                    <Text >
                       Local Warehouses
-                    </a>
+                    </Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="770px"
-                      mt="-35px"
+                      pos='absolute'
+                      top='0'
+                      left='256px'
                       className="localWarehouse"
                     >
                       <Flex>
@@ -301,14 +394,16 @@ const Navbar = () => {
 
                   <Box className="second">
                     {" "}
-                    <a className="second" >
+                    <Text  >
                       Sports & Outdoors
-                    </a>
+                    </Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="770px"
-                      mt="-68px"
+                      pos='absolute'
+                      top='0'
+                      left='256px'
                       className="sportsAndoutdoors"
                     >
                       <Flex>
@@ -345,12 +440,14 @@ const Navbar = () => {
                   {/* */}
                   <div className="third">
                     {" "}
-                    <a >Smart Home & Garden</a>
+                    <Text>Smart Home & Garden</Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="770px"
-                      mt="-108px"
+                      pos='absolute'
+                      top='0' 
+                      left='256px'
                       className="smartHome"
                     >
                       <Flex>
@@ -387,12 +484,13 @@ const Navbar = () => {
                   {/**/}
                   <div className="forth">
                     {" "}
-                    <a >Consumer Electronics</a>
+                    <Text >Consumer Electronics</Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="770px"
-                      mt="-142px"
+                      pos='absolute'
+                      top='0'left='256px'
                       className="consumerElectronics"
                     >
                       <Flex>
@@ -432,12 +530,13 @@ const Navbar = () => {
                   </div>
                   <div className="fifth">
                     {" "}
-                    <a >Generators & Portable Power</a>
+                    <Text >Generators & Portable Power</Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="550px"
-                      mt="-178px"
+                      pos='absolute'
+                      top='0'left='256px'
                       className="generators"
                     >
                       <Flex>
@@ -460,12 +559,13 @@ const Navbar = () => {
 
                   <div className="sixth">
                     {" "}
-                    <a>Computers, Tablets & Accessories</a>
+                    <Text>Computers, Tablets & Accessories</Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="800px"
-                      mt="-215px"
+                      pos='absolute'
+                      top='0' left='256px'
                       className="computers"
                     >
                       <Flex>
@@ -502,12 +602,13 @@ const Navbar = () => {
                   </div>
                   <Box className="seventh">
                     {" "}
-                    <a>TV Boxes & Mini PCs</a>
+                    <Text>TV Boxes & Mini PCs</Text>
                     <Box
-                      ml="250px"
+                     
                       h="442px"
                       w="550px"
-                      mt="-250px"
+                      pos='absolute'
+                      top='0' left='256px'
                       className="TvBoxes"
                     >
                       <Flex>
@@ -534,12 +635,13 @@ const Navbar = () => {
 
                   <div className="eighth">
                     {" "}
-                    <a href="#">Toys & Hobbies</a>
+                    <Text>Toys & Hobbies</Text>
                     <Box
-                      ml="250px"
+                    
                       h="442px"
                       w="800px"
-                      mt="-285px"
+                      pos='absolute'
+                      top='0' left='256px'
                       className="Toys"
                     >
                       <Flex>
@@ -586,12 +688,13 @@ const Navbar = () => {
                   </div>
                   <div className="ninth">
                     {" "}
-                    <a >Phones & Accessories</a>
+                    <Text>Phones & Accessories</Text>
                     <Box
-                      ml="250px"
+                    
                       h="442px"
                       w="600px"
-                      mt="-322px"
+                      pos='absolute'
+                      top='0' left='256px'
                       className="phones"
                     >
                       <Flex>
@@ -618,12 +721,13 @@ const Navbar = () => {
                   </div>
                   <div className="tenth">
                     {" "}
-                    <a >Automobiles & Motorcycles</a>
+                    <Text>Automobiles & Motorcycles</Text>
                     <Box
-                      ml="250px"
+                    
                       h="442px"
                       w="600px"
-                      mt="-358px"
+                      pos='absolute'
+                      top='0' left='256px'
                       className="Automobiles"
                     >
                       <Flex>
@@ -650,12 +754,13 @@ const Navbar = () => {
                   </div>
                   <div className="eleventh">
                     {" "}
-                    <a >Security Systems</a>
+                    <Text>Security Systems</Text>
                     <Box
-                      ml="250px"
+                   
                       h="442px"
                       w="600px"
-                      mt="-394px"
+                      pos='absolute'
+                      top='0'  left='256px'
                       className="security"
                     >
                       <Flex>
@@ -681,12 +786,13 @@ const Navbar = () => {
                   </div>
                   <div className="twelth">
                     {" "}
-                    <a >Wearable Devices</a>
+                    <Text>Wearable Devices</Text>
                     <Box
-                      ml="250px"
+                   
                       h="442px"
                       w="500px"
-                      mt="-430px"
+                      pos='absolute'
+                      top='0' left='256px'
                       className="wearableDevices"
                     >
                       <Flex>
